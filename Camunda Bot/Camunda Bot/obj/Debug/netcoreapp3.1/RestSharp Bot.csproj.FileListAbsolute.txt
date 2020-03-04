@@ -1,0 +1,13 @@
+C:\Users\jralp\source\repos\RestSharp Bot\RestSharp Bot\bin\Debug\netcoreapp3.1\RestSharp Bot.exe
+C:\Users\jralp\source\repos\RestSharp Bot\RestSharp Bot\obj\Debug\netcoreapp3.1\RestSharp Bot.csprojAssemblyReference.cache
+C:\Users\jralp\source\repos\RestSharp Bot\RestSharp Bot\obj\Debug\netcoreapp3.1\RestSharp Bot.AssemblyInfoInputs.cache
+C:\Users\jralp\source\repos\RestSharp Bot\RestSharp Bot\obj\Debug\netcoreapp3.1\RestSharp Bot.AssemblyInfo.cs
+C:\Users\jralp\source\repos\RestSharp Bot\RestSharp Bot\bin\Debug\netcoreapp3.1\RestSharp Bot.deps.json
+C:\Users\jralp\source\repos\RestSharp Bot\RestSharp Bot\bin\Debug\netcoreapp3.1\RestSharp Bot.runtimeconfig.json
+C:\Users\jralp\source\repos\RestSharp Bot\RestSharp Bot\bin\Debug\netcoreapp3.1\RestSharp Bot.runtimeconfig.dev.json
+C:\Users\jralp\source\repos\RestSharp Bot\RestSharp Bot\bin\Debug\netcoreapp3.1\RestSharp Bot.dll
+C:\Users\jralp\source\repos\RestSharp Bot\RestSharp Bot\bin\Debug\netcoreapp3.1\RestSharp Bot.pdb
+C:\Users\jralp\source\repos\RestSharp Bot\RestSharp Bot\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\jralp\source\repos\RestSharp Bot\RestSharp Bot\obj\Debug\netcoreapp3.1\RestSharp Bot.csproj.CopyComplete
+C:\Users\jralp\source\repos\RestSharp Bot\RestSharp Bot\obj\Debug\netcoreapp3.1\RestSharp Bot.dll
+C:\Users\jralp\source\repos\RestSharp Bot\RestSharp Bot\obj\Debug\netcoreapp3.1\RestSharp Bot.pdb

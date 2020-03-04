@@ -1,77 +1,76 @@
 ﻿using System;
-using System.Threading;
-using System.Collections.Generic;
 using System.Text;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
 
-using System.Net;
-using System.Net.Sockets;
-
-namespace Camunda_Bot
+namespace CamundaBot
 {
 
-    class UDPHandler
+
+    class CamundaBot
     {
-        private int receivePort, sendPort;
-        private string serverIP;
-        private IPEndPoint sendEndPoint, receiveEndPoint;
+        private string definitionKey, definitionID, json;
+        private HttpClient client;
 
-        public UDPHandler(string serverIP, int receivePort, int sendPort)
+
+        public CamundaBot(string definitionKey, string definitionID, string json)
         {
-            this.serverIP = serverIP;
-            this.receivePort = receivePort;
-            this.sendPort = sendPort;
-            this.sendEndPoint = new IPEndPoint(IPAddress.Parse(this.serverIP), this.sendPort);
-            this.receiveEndPoint = new IPEndPoint(IPAddress.Parse(this.serverIP), this.receivePort);
-            this.readerUdpClient();
-            this.senderUdpClient();
-        }
-        void readerUdpClient()
-        {
-            new Thread(() => {
-                UdpClient readerClient = new UdpClient(receivePort);
-                Console.WriteLine("Awaiting data from server...");
-                var remoteEP = new IPEndPoint(IPAddress.Any, 0);
-                byte[] bytesReceived = readerClient.Receive(ref remoteEP);
-                Console.WriteLine($"Received {bytesReceived.Length} bytes from {remoteEP}");
-            }).Start();
+            this.definitionID = definitionID;
+            this.definitionKey = definitionKey;
+            this.json = json;
+            this.client = new HttpClient();
         }
 
-        void senderUdpClient()
+        public async Task<string> StartProcess()
+            // Start the process of the CamundaBot using the stored processId and json
         {
-            UdpClient senderClient = new UdpClient();
-            senderClient.Connect(this.sendEndPoint);
-            string sendString = "1;2;3";
-            byte[] bytes = toBytes(sendString);
-            Thread t = new Thread(() => {
-                while (true)
-                {
-                    senderClient.Send(bytes, bytes.Length);
-                    Thread.Sleep(1000);
-                }
-            });
-            t.Start();
+            string url = "http://localhost:8080/engine-rest/process-definition/key/" + this.definitionKey + "/start";
+
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+            
+            // Send the POST message to Camunda to start the process
+            HttpResponseMessage response = await this.client.PostAsync(url, data);
+
+            
+            string result = response.Content.ReadAsStringAsync().Result;
+
+            return result;
         }
 
-        public byte[] toBytes(string text)
+        public async Task<string> GetActivities()
         {
-            return Encoding.UTF8.GetBytes(text);
+            string url = "http://localhost:8080/engine-rest/history/activity-instance?processDefinitionId=" + this.definitionID;
+
+            HttpResponseMessage response = await this.client.GetAsync(url);
+
+            string activities = response.Content.ReadAsStringAsync().Result;
+
+            return activities;
         }
 
-        public string fromBytes(byte[] bytes)
-        {
-            return Encoding.UTF8.GetString(bytes);
-        }
-
+    
     }
 
     class Program
     {
-        static void Main(string[] args)
+
+        static async Task Main(string[] args)
         {
-            string serverIP = "46.101.102.243";
-            int sendPort = 41234;
-            int receivePort = 3000;
-            UDPHandler handler = new UDPHandler(serverIP, receivePort, sendPort);
+            string definitionKey = "sequence";
+            string definitionID = "sequence:1:cf32a197-5dbf-11ea-a86b-00d86175334f";
+            string json = "";
+            CamundaBot sequenceBot = new CamundaBot(definitionKey, definitionID, json);
+
+
+            // This should print the response from Camunda, Just like what is returned to Postman.
+            string result = await sequenceBot.StartProcess();
+            Console.WriteLine(result);
+
+            string activities = await sequenceBot.GetActivities();
+            Console.WriteLine(activities);
+
+            
         }
     }
 }
