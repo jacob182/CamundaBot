@@ -11,3 +11,16 @@ C:\Users\jralp\source\repos\RestSharp Bot\RestSharp Bot\obj\Debug\netcoreapp3.1\
 C:\Users\jralp\source\repos\RestSharp Bot\RestSharp Bot\obj\Debug\netcoreapp3.1\CamundaBot.csproj.CopyComplete
 C:\Users\jralp\source\repos\RestSharp Bot\RestSharp Bot\obj\Debug\netcoreapp3.1\CamundaBot.dll
 C:\Users\jralp\source\repos\RestSharp Bot\RestSharp Bot\obj\Debug\netcoreapp3.1\CamundaBot.pdb
+C:\Users\jralp\Desktop\Jake\Uni work\IFB398 Capstone\CamundaBot Repo\Camunda Bot\Camunda Bot\bin\Debug\netcoreapp3.1\CamundaBot.exe
+C:\Users\jralp\Desktop\Jake\Uni work\IFB398 Capstone\CamundaBot Repo\Camunda Bot\Camunda Bot\bin\Debug\netcoreapp3.1\CamundaBot.deps.json
+C:\Users\jralp\Desktop\Jake\Uni work\IFB398 Capstone\CamundaBot Repo\Camunda Bot\Camunda Bot\bin\Debug\netcoreapp3.1\CamundaBot.runtimeconfig.json
+C:\Users\jralp\Desktop\Jake\Uni work\IFB398 Capstone\CamundaBot Repo\Camunda Bot\Camunda Bot\bin\Debug\netcoreapp3.1\CamundaBot.runtimeconfig.dev.json
+C:\Users\jralp\Desktop\Jake\Uni work\IFB398 Capstone\CamundaBot Repo\Camunda Bot\Camunda Bot\bin\Debug\netcoreapp3.1\CamundaBot.dll
+C:\Users\jralp\Desktop\Jake\Uni work\IFB398 Capstone\CamundaBot Repo\Camunda Bot\Camunda Bot\bin\Debug\netcoreapp3.1\CamundaBot.pdb
+C:\Users\jralp\Desktop\Jake\Uni work\IFB398 Capstone\CamundaBot Repo\Camunda Bot\Camunda Bot\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\jralp\Desktop\Jake\Uni work\IFB398 Capstone\CamundaBot Repo\Camunda Bot\Camunda Bot\obj\Debug\netcoreapp3.1\CamundaBot.csprojAssemblyReference.cache
+C:\Users\jralp\Desktop\Jake\Uni work\IFB398 Capstone\CamundaBot Repo\Camunda Bot\Camunda Bot\obj\Debug\netcoreapp3.1\CamundaBot.AssemblyInfoInputs.cache
+C:\Users\jralp\Desktop\Jake\Uni work\IFB398 Capstone\CamundaBot Repo\Camunda Bot\Camunda Bot\obj\Debug\netcoreapp3.1\CamundaBot.AssemblyInfo.cs
+C:\Users\jralp\Desktop\Jake\Uni work\IFB398 Capstone\CamundaBot Repo\Camunda Bot\Camunda Bot\obj\Debug\netcoreapp3.1\CamundaBot.csproj.CopyComplete
+C:\Users\jralp\Desktop\Jake\Uni work\IFB398 Capstone\CamundaBot Repo\Camunda Bot\Camunda Bot\obj\Debug\netcoreapp3.1\CamundaBot.dll
+C:\Users\jralp\Desktop\Jake\Uni work\IFB398 Capstone\CamundaBot Repo\Camunda Bot\Camunda Bot\obj\Debug\netcoreapp3.1\CamundaBot.pdb

@@ -57,11 +57,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jralp\\source\\repos\\Camunda Bot\\Camunda Bot\\CamundaBot.csproj",
+      "projectUniqueName": "C:\\Users\\jralp\\Desktop\\Jake\\Uni work\\IFB398 Capstone\\CamundaBot Repo\\Camunda Bot\\Camunda Bot\\CamundaBot.csproj",
       "projectName": "CamundaBot",
-      "projectPath": "C:\\Users\\jralp\\source\\repos\\Camunda Bot\\Camunda Bot\\CamundaBot.csproj",
+      "projectPath": "C:\\Users\\jralp\\Desktop\\Jake\\Uni work\\IFB398 Capstone\\CamundaBot Repo\\Camunda Bot\\Camunda Bot\\CamundaBot.csproj",
       "packagesPath": "C:\\Users\\jralp\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jralp\\source\\repos\\Camunda Bot\\Camunda Bot\\obj\\",
+      "outputPath": "C:\\Users\\jralp\\Desktop\\Jake\\Uni work\\IFB398 Capstone\\CamundaBot Repo\\Camunda Bot\\Camunda Bot\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\jralp\\AppData\\Roaming\\NuGet\\NuGet.Config",
