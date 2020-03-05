@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace CamundaBot
 {
@@ -30,9 +31,8 @@ namespace CamundaBot
         public string tenantId { get; set; }
         public string removalTime { get; set; }
         public string rootProcessInstanceId { get; set; }
-
-        public int startTime { get; set; }
-        public int endTime { get; set; }
+        public string startTime { get; set; }
+        public string endTime { get; set; }
         public int durationInMillis { get; set; }
     }
 
@@ -75,24 +75,19 @@ namespace CamundaBot
 
             HttpResponseMessage response = await this.client.GetAsync(url);
 
-            MatchCollection activities = Regex.Matches(response.Content.ReadAsStringAsync().Result, @"{[^{}]*}");
-
-
-            for (int i = 0; i < activities.Length - 1; i++)
-            {
-                activities[i] = activities[i] + "}";
-            }
-
-            Console.WriteLine(activities[0]);
+            string[] activities = Regex.Matches(response.Content.ReadAsStringAsync().Result, @"{[^{}]*}")
+                .Cast<Match>()
+                .Select(m => m.Value)
+                .ToArray();
 
             List<Activity> activityList = new List<Activity>();
 
-            /*
+            
             foreach (string activity in activities)
             {
                 activityList.Add(JsonConvert.DeserializeObject<Activity>(activity));
             }
-            */
+            
 
             return activityList;
         }
@@ -107,9 +102,16 @@ namespace CamundaBot
 
         static async Task Main(string[] args)
         {
+            // ******* The parameters need to be configured correctly before running the bot *******
+
+            // The definition key of the process.
             string definitionKey = "sequence";
+
+            // The definition ID for your deployment of the process in Camunda.
             string definitionID = "sequence:1:56ede483-5de0-11ea-a86b-00d86175334f";
             string json = "";
+
+            // Building the CamundaBot using the parameters above.
             CamundaBot sequenceBot = new CamundaBot(definitionKey, definitionID, json);
 
 
@@ -120,10 +122,9 @@ namespace CamundaBot
             List<Activity> activities = await sequenceBot.GetActivities();
             
 
-            //Console.WriteLine(activities[0].activityName);
+            Console.WriteLine(activities[6].activityName);
 
 
-            //Console.WriteLine(activitiesJSON);
 
             
         }
