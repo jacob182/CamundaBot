@@ -24,3 +24,4 @@ C:\Users\jralp\Desktop\Jake\Uni work\IFB398 Capstone\CamundaBot Repo\Camunda Bot
 C:\Users\jralp\Desktop\Jake\Uni work\IFB398 Capstone\CamundaBot Repo\Camunda Bot\Camunda Bot\obj\Debug\netcoreapp3.1\CamundaBot.csproj.CopyComplete
 C:\Users\jralp\Desktop\Jake\Uni work\IFB398 Capstone\CamundaBot Repo\Camunda Bot\Camunda Bot\obj\Debug\netcoreapp3.1\CamundaBot.dll
 C:\Users\jralp\Desktop\Jake\Uni work\IFB398 Capstone\CamundaBot Repo\Camunda Bot\Camunda Bot\obj\Debug\netcoreapp3.1\CamundaBot.pdb
+C:\Users\jralp\Desktop\Jake\Uni work\IFB398 Capstone\CamundaBot Repo\Camunda Bot\Camunda Bot\bin\Debug\netcoreapp3.1\CsvHelper.dll

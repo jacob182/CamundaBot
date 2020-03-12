@@ -6,6 +6,9 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Linq;
+using System.IO;
+using CsvHelper;
+using System.Globalization;
 
 namespace CamundaBot
 {
@@ -102,26 +105,77 @@ namespace CamundaBot
 
         static async Task Main(string[] args)
         {
-            // ******* The parameters need to be configured correctly before running the bot *******
+            // ******* These parameters need to be configured correctly before running the bot *******
+
+
+
+            // * The definition key and ID are required for the CamundaBot to know which process to work with. *
 
             // The definition key of the process.
             string definitionKey = "sequence";
 
             // The definition ID for your deployment of the process in Camunda.
             string definitionID = "sequence:1:56ede483-5de0-11ea-a86b-00d86175334f";
+            
+            // The JSON object containing the required variables (Leave blank if none are required)
             string json = "";
+
+            // Do you want to start the process again? (true/false)
+            bool startProcess = false;
+            // if so, how many times?
+            int timesStarted = 1;
+
+
+
+
+            // * Setting the file name and file path for the purpose of saving the returned activities into a csv file *
+
+            // Where do you want to save the file?
+            string fileName = "testFile";  // the name of the file to be saved.
+
+            string filePath = @"C:\Users\jralp\Desktop\Jake\Uni work\IFB398 Capstone\CamundaBot Repo\Camunda Bot\CSV files"; // This is where the file will be saved.
+
+            filePath = filePath + @"\" + fileName + ".csv"; // Joining them together for use.
+
+
+
+
+            // ******* These parameters need to be configured correctly before running the bot *******
+
+
+
 
             // Building the CamundaBot using the parameters above.
             CamundaBot sequenceBot = new CamundaBot(definitionKey, definitionID, json);
 
 
-            // This should print the response from Camunda, Just like what is returned to Postman.
-            //string result = await sequenceBot.StartProcess();
-            //Console.WriteLine(result);
-
-            List<Activity> activities = await sequenceBot.GetActivities();
+            // Starting the process the required amount of times
+            if (startProcess)
+            {
+                for (int i = 0; i < timesStarted; i++)
+                {
+                    await sequenceBot.StartProcess();
+                }
+            }
             
 
+
+            // Create a list of the Activities from Camunda using the GetActivities function
+            List <Activity> activities = await sequenceBot.GetActivities();
+            
+
+            // Store the list of activities as a csv file.
+
+            using (var writer = new StreamWriter(filePath))
+            using(var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))
+            {
+                csv.WriteRecords(activities);
+            }
+
+
+
+
+            // Write the name of an activity to the console to test that it worked.
             Console.WriteLine(activities[6].activityName);
 
 
