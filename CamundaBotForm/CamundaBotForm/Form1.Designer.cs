@@ -44,6 +44,7 @@
             this.FilePathLbl = new System.Windows.Forms.Label();
             this.RunProgramBtn = new System.Windows.Forms.Button();
             this.SuccessLbl = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.TimesTxtBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -56,7 +57,7 @@
             // 
             // JSONTxtBox
             // 
-            this.JSONTxtBox.Location = new System.Drawing.Point(84, 154);
+            this.JSONTxtBox.Location = new System.Drawing.Point(84, 167);
             this.JSONTxtBox.Name = "JSONTxtBox";
             this.JSONTxtBox.Size = new System.Drawing.Size(246, 20);
             this.JSONTxtBox.TabIndex = 1;
@@ -78,45 +79,50 @@
             // DefinitionIdLbl
             // 
             this.DefinitionIdLbl.AutoSize = true;
+            this.DefinitionIdLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DefinitionIdLbl.Location = new System.Drawing.Point(81, 77);
             this.DefinitionIdLbl.Name = "DefinitionIdLbl";
-            this.DefinitionIdLbl.Size = new System.Drawing.Size(65, 13);
+            this.DefinitionIdLbl.Size = new System.Drawing.Size(78, 13);
             this.DefinitionIdLbl.TabIndex = 7;
             this.DefinitionIdLbl.Text = "Definition ID";
             // 
             // DefinitionKeyLbl
             // 
             this.DefinitionKeyLbl.AutoSize = true;
+            this.DefinitionKeyLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DefinitionKeyLbl.Location = new System.Drawing.Point(414, 77);
             this.DefinitionKeyLbl.Name = "DefinitionKeyLbl";
-            this.DefinitionKeyLbl.Size = new System.Drawing.Size(72, 13);
+            this.DefinitionKeyLbl.Size = new System.Drawing.Size(86, 13);
             this.DefinitionKeyLbl.TabIndex = 8;
             this.DefinitionKeyLbl.Text = "Definition Key";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(81, 138);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(81, 151);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(198, 13);
+            this.label3.Size = new System.Drawing.Size(237, 13);
             this.label3.TabIndex = 9;
             this.label3.Text = "JSON String (Leave blank if not needed)";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(414, 138);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(414, 151);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 13);
+            this.label4.Size = new System.Drawing.Size(85, 13);
             this.label4.TabIndex = 10;
             this.label4.Text = "Times Started";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(81, 217);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(54, 13);
+            this.label5.Size = new System.Drawing.Size(63, 13);
             this.label5.TabIndex = 11;
             this.label5.Text = "File Name";
             // 
@@ -125,7 +131,7 @@
             this.StartProcessCheckBox.AutoSize = true;
             this.StartProcessCheckBox.Checked = true;
             this.StartProcessCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.StartProcessCheckBox.Location = new System.Drawing.Point(84, 276);
+            this.StartProcessCheckBox.Location = new System.Drawing.Point(84, 270);
             this.StartProcessCheckBox.Name = "StartProcessCheckBox";
             this.StartProcessCheckBox.Size = new System.Drawing.Size(95, 17);
             this.StartProcessCheckBox.TabIndex = 12;
@@ -135,15 +141,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(414, 217);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(76, 13);
+            this.label1.Size = new System.Drawing.Size(90, 13);
             this.label1.TabIndex = 14;
             this.label1.Text = "Save File Path";
             // 
             // TimesTxtBox
             // 
-            this.TimesTxtBox.Location = new System.Drawing.Point(417, 155);
+            this.TimesTxtBox.Location = new System.Drawing.Point(417, 168);
             this.TimesTxtBox.Name = "TimesTxtBox";
             this.TimesTxtBox.Size = new System.Drawing.Size(246, 20);
             this.TimesTxtBox.TabIndex = 15;
@@ -162,6 +169,7 @@
             // 
             this.FilePathLbl.AutoSize = true;
             this.FilePathLbl.Location = new System.Drawing.Point(509, 238);
+            this.FilePathLbl.MaximumSize = new System.Drawing.Size(154, 0);
             this.FilePathLbl.Name = "FilePathLbl";
             this.FilePathLbl.Size = new System.Drawing.Size(57, 13);
             this.FilePathLbl.TabIndex = 17;
@@ -189,11 +197,22 @@
             this.SuccessLbl.Text = "File Created!";
             this.SuccessLbl.Visible = false;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(192, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(365, 42);
+            this.label2.TabIndex = 20;
+            this.label2.Text = "Camunda Testing Bot";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 388);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.SuccessLbl);
             this.Controls.Add(this.RunProgramBtn);
             this.Controls.Add(this.FilePathLbl);
@@ -211,6 +230,7 @@
             this.Controls.Add(this.JSONTxtBox);
             this.Controls.Add(this.DefinitionIDTxtBox);
             this.Name = "Form1";
+            this.Text = "Camunda Testing";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.TimesTxtBox)).EndInit();
             this.ResumeLayout(false);
@@ -236,6 +256,7 @@
         private System.Windows.Forms.Label FilePathLbl;
         private System.Windows.Forms.Button RunProgramBtn;
         private System.Windows.Forms.Label SuccessLbl;
+        private System.Windows.Forms.Label label2;
     }
 }
 
